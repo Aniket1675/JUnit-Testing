@@ -31,5 +31,18 @@ public class UserRegistration {
         }
         return result;
     }
+    /*
+     Added  last name method to check last name
+    */
+    public boolean lastName(String lastLame) {
+        boolean result = Pattern.matches("^[A-Z]{1}[A-Za-z]{2,}$",lastLame);
+
+        if (result) {
+            System.out.println("The last name " + lastLame + " is valid.");
+        } else {
+            System.out.println("The last name " + lastLame + " is invalid.");
+        }
+        return result;
+    }
 
 }
