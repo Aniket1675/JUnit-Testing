@@ -58,4 +58,18 @@ public class UserRegistration {
         return result;
     }
 
+    /*
+  Added phoneNo method to check phone number is valid or not
+ */
+    public boolean phoneNo(String phonenumber) {
+        boolean result = Pattern.matches("[6-9]{1}[0-9]{9}",phonenumber);
+        if (result) {
+            System.out.println("Correct");
+        }
+        else {
+            System.out.println("Please enter correct phone number");
+        }
+        return result;
+    }
+
 }

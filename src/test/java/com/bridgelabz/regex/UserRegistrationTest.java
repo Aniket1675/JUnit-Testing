@@ -43,5 +43,16 @@ import org.junit.jupiter.api.Test;
         boolean result = userRegistration.eMail("aniketkumbhar111gmail.com");
         Assert.assertFalse(result);
     }
+    @Test
+    public void whenphoneNO_ShouldProper_ShouldReturnTrue() {
+        boolean result = userRegistration.phoneNo("8956038877");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenphoneNO_ShouldNotProper_ShouldReturnFalse() {
+        boolean result = userRegistration.phoneNo("895603887");
+        Assert.assertFalse(result);
+    }
 
 }
