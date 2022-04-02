@@ -32,5 +32,16 @@ import org.junit.jupiter.api.Test;
         boolean result = userRegistration.lastName("kumbhar");
         Assert.assertFalse(result);
     }
+    @Test
+    public void whenEmailId_ShouldProper_ShouldReturnTrue() {
+        boolean result = userRegistration.eMail("aniketkumbhar111@gmail.com");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenEmailId_ShouldProper_ShouldReturnFalse() {
+        boolean result = userRegistration.eMail("aniketkumbhar111gmail.com");
+        Assert.assertFalse(result);
+    }
 
 }

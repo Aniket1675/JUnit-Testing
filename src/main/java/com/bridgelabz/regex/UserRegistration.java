@@ -44,5 +44,18 @@ public class UserRegistration {
         }
         return result;
     }
+    /*
+    Added eMail method to check EmailID is valid or not
+   */
+    public boolean eMail(String email) {
+        boolean result = Pattern.matches("^[A-Za-z0-9]+([._+-][A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}([.][A-Za-z]{2})*$",email);
+
+        if (result) {
+            System.out.println("The eMail " + email + " is valid.");
+        } else {
+            System.out.println("The eMail " + email + " is invalid.");
+        }
+        return result;
+    }
 
 }
