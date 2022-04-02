@@ -55,4 +55,16 @@ import org.junit.jupiter.api.Test;
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void whenPassWord_ShouldProper_ShouldReturnTrue() {
+        boolean result = userRegistration.password("Pass@123");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenPassWord_ShouldProper_ShouldReturnFalse() {
+        boolean result = userRegistration.password("Pass123");
+        Assert.assertFalse(result);
+    }
+
 }

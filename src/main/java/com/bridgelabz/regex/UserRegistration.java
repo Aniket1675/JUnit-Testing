@@ -71,5 +71,18 @@ public class UserRegistration {
         }
         return result;
     }
+    /*
+    Added password method to check password is valid or not
+   */
+    public boolean password(String password) {
+        boolean result = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$",password);
+
+        if (result) {
+            System.out.println("The password " + password + " is valid.");
+        } else {
+            System.out.println("The password " + password + " is invalid.");
+        }
+        return result;
+    }
 
 }
